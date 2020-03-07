@@ -1,0 +1,14 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Booklist</title>
+</head>
+<body>
+<th:block th:include="common::my-header" />
+
+<table>     <thead>         <th>name</th>         <th>isbn</th>     </thead>     <tbody>     <tr th:each="book: ${books}">         <td th:text="${book.title}"></td>         <td th:text="${book.isbn}"></td>     </tr>     </tbody> </table>
+<a href="http://localhost:8083/add-book">
+    <input type="button" value="Add a book" />
+</a>
+
+</body>
+</html>
